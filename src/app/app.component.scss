@@ -1,0 +1,25 @@
+.loading-box {
+    box-shadow: 2px 1px 16px rgb(217 211 211), -4px -5px 16px rgb(255 255 255 / 5%);
+  }
+
+  .box-inset {
+    box-shadow: inset 7px 7px 14px #f8f9fa, inset -7px -7px 14px #f8f9fa;
+  }
+
+  .card:hover {
+    transform: scale(1.1,1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .card {
+    transform: scale(1,1);
+    transition: 0.3s ease-in-out;
+  }
+
+  input[type="range"] {
+		width: 100%;
+    height: 5px;
+	}
+  
+
+
