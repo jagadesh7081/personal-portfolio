@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-md bg-purple-700">
+<nav class="navbar navbar-expand-lg shadow-md bg-purple-800">
   <div class="container-fluid mx-5 rounded">
     <div class="collapse navbar-collapse gap-5">
       <span class="navbar-brand fw-bold text-white">Jagadesh Srinivasan</span>
@@ -44,18 +44,18 @@
           <path fill="#998ab4"
             d="M51.8,-52.2C62.9,-40.7,64.7,-20.3,64.2,-0.5C63.6,19.2,60.7,38.5,49.6,53.1C38.5,67.6,19.2,77.5,1.6,75.9C-16,74.2,-31.9,61.1,-48.1,46.5C-64.3,31.9,-80.8,16,-81.9,-1.1C-82.9,-18.1,-68.7,-36.3,-52.5,-47.8C-36.3,-59.4,-18.1,-64.3,1.1,-65.4C20.3,-66.5,40.7,-63.8,51.8,-52.2Z"
             transform="translate(100 100)" />
-          <image xlink:href="../assets/jade-removebg-preview.png" x="0" y="10" width="175" height="175" />
+          <image xlink:href="assets/jade-removebg-preview.png" x="0" y="10" width="175" height="175" />
         </g>
       </svg>
     </div>
   </div>
-  <div class="row m-3">
+  <div class="row m-5 py-2 loading-box rounded">
     <p class="fw-bold fs-1 text-center text-purple-600">Skills</p>
   </div>
-  <div class="row d-flex flex-wrap justify-content-around">
+  <div class="row mb-3 py-3 d-flex flex-wrap justify-content-around">
     <div class="col-md-3 mb-3 card text-center border-0 loading-box">
       <div class="card-header fw-bold fs-5 border-0 p-4" style="background: #fcfbff">
-        FrontEnd Development
+        <fa-icon [icon]="faLaptopCode" class="text-purple-600"></fa-icon> FrontEnd Development
       </div>
       <div class="card-body">
         <div class="row">
@@ -93,7 +93,7 @@
 
     <div class="col-md-3 mb-3 card text-center border-0 loading-box">
       <div class="card-header fw-bold fs-5 border-0 p-4" style="background: #fcfbff">
-        Database
+        <fa-icon [icon]="faDB" class="text-purple-600"></fa-icon> Database
       </div>
       <div class="card-body">
         <div class="row">
@@ -126,7 +126,7 @@
 
     <div class="col-md-3 mb-3 card text-center border-0 loading-box">
       <div class="card-header fw-bold fs-5 border-0 p-4" style="background: #fcfbff">
-        BackEnd Development
+        <fa-icon [icon]="faServer" class="text-purple-600"></fa-icon> BackEnd Development
       </div>
       <div class="card-body">
         <div class="row">
@@ -156,6 +156,113 @@
         <input type="range" value="60" disabled class="mb-3" />
       </div>
     </div>
+  </div>
+  <div class="row mb-3 py-3 d-flex flex-wrap justify-content-around">
+    <div class="col-md-3 mb-3 p-3 card text-center border-0 loading-box">
+      <div class="card-header fw-bold fs-5 border-0 p-4" style="background: #fcfbff">
+        <fa-icon [icon]="faDevops" class="text-purple-600"></fa-icon> DevOps
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6 fw-bold text-purple-400 text-start">Azure Devops</div>
+          <div class="col-md-6 fw-bold text-purple-400 text-end">90%</div>
+        </div>
+        <input type="range" value="90" disabled class="mb-3" />
+        <div class="row">
+          <div class="col-md-6 fw-bold text-purple-400 text-start">Jenkins</div>
+          <div class="col-md-6 fw-bold text-purple-400 text-end">60%</div>
+        </div>
+        <input type="range" value="60" disabled class="mb-3" />
+        <div class="row">
+          <div class="col-md-6 fw-bold text-purple-400 text-start">AWS Pipeline</div>
+          <div class="col-md-6 fw-bold text-purple-400 text-end">60%</div>
+        </div>
+        <input type="range" value="60" disabled class="mb-3" />
+        <div class="row">
+          <div class="col-md-6 fw-bold text-purple-400 text-start">GitHub Actions</div>
+          <div class="col-md-6 fw-bold text-purple-400 text-end">75%</div>
+        </div>
+        <input type="range" value="75" disabled class="mb-3" />
+      </div>
+    </div>
 
+  </div>
+</div>
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <p class="col-md-10 fw-bold fs-1 text-center text-purple-600 qualification rounded-pill p-2"
+          [ngClass]="isEducation ? 'box-inset' : 'loading-box'" (click)="onClickToggle('qualification')">
+          <fa-icon [icon]="faCap" class="text-purple-600"></fa-icon> Qualification
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="col-md-10 float-end fw-bold fs-1 text-center text-purple-600 qualification rounded-pill p-2"
+          [ngClass]="isWork ? 'box-inset' : 'loading-box'" (click)="onClickToggle('work')">
+          <fa-icon [icon]="faWork" class="text-purple-600"></fa-icon> Work
+        </p>
+      </div>
+    </div>
+    <div @educationInsertRemoveTrigger class="row" *ngIf="isEducation">
+      <div class="col-xl-12">
+        <ul class="timeline-list">
+          <li>
+            <div class="timeline_content card shadow-lg">
+              <span class="fw-bold text-purple-500">2012 - 2013</span>
+              <p class="fw-bold fs-5">SSLC</p>
+              <p>We gather your business and products information. We then determine the direction of the project and
+                understand your goals and we combine your ideas with ours for an amazing website.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline_content card shadow-lg">
+              <span class="fw-bold text-purple-500">2014 - 2015</span>
+              <p class="fw-bold fs-5">Higher Secondary</p>
+              <p>We gather your business and products information. We then determine the direction of the project and
+                understand your goals and we combine your ideas with ours for an amazing website.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline_content card shadow-lg">
+              <span class="fw-bold text-purple-500">2015 - 2019</span>
+              <p class="fw-bold fs-5">B.E (ECE)</p>
+              <p>We gather your business and products information. We then determine the direction of the project and
+                understand your goals and we combine your ideas with ours for an amazing website.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div @workInsertRemoveTrigger class="row" *ngIf="isWork">
+      <div class="col-xl-12">
+        <ul class="timeline-list">
+          <li>
+            <div class="timeline_content card shadow-lg">
+              <span class="fw-bold text-purple-500">Sep 2019 - Nov 2021</span>
+              <p class="fw-bold fs-5">Tata Consultancy Services (TCS)</p>
+              <p>We gather your business and products information. We then determine the direction of the project and
+                understand your goals and we combine your ideas with ours for an amazing website.</p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline_content card shadow-lg">
+              <span class="fw-bold text-purple-500">Nov 2021 - Ongoing</span>
+              <p class="fw-bold fs-5">Verizon Data Service India (VDSI)</p>
+              <p>We gather your business and products information. We then determine the direction of the project and
+                understand your goals and we combine your ideas with ours for an amazing website.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid p-5">
+  <div class="row m-5 py-2 loading-box rounded">
+    <p class="fw-bold fs-1 text-center text-purple-600">
+      <fa-icon [icon]="faCode" class="text-purple-600"></fa-icon> Projects
+    </p>
   </div>
 </div>
